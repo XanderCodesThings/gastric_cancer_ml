@@ -1,5 +1,5 @@
-# Personal Contributions
-*Note: This project was completed as part of university research during an AI course. The original repository was maintained privately for academic purposes. This repository contains only my individual implementation and documentation.*
+# Repository Overview
+*Note: This project originated as part of a university AI course. The original project was developed collaboratively in a private repository. This repository contains only my independently written code, experiments, documentation, and analysis.*
 
 Research Area: Predictive Analytics for Healthcare
 
@@ -11,10 +11,19 @@ Historically, diagnosing gastric cancer has been an extremely invasive process. 
 
 ## Methods (Literature Review Summary)
 
-We plan to compare the following models:
+This study evaluates the following models:
 
 1. Gradient Boosting Decision Tree (GBDT)
 2. Random Forests
+
+## Results
+
+| Model | ROC-AUC |
+|--------|--------:|
+| Random Forest | 0.885 |
+| Gradient Boosting Decision Tree | 0.879 |
+
+Both models successfully discriminated between gastric cancer and control patients using only non-invasive clinical biomarkers.
 
 ## Experimental Setup
 
