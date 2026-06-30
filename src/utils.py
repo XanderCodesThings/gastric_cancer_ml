@@ -1,4 +1,4 @@
-from constants import DATA_PATH, CV, SEED, SCORING
+from constants import DATA_PATH, CV, SCORING
 import pandas as pd
 from sklearn.model_selection import cross_validate
 
@@ -13,7 +13,7 @@ def load_data():
     y : pandas.Series
         Target labels.
     """
-    df = pd.read_csv(DATA_PATH).drop_duplicates
+    df = pd.read_csv(DATA_PATH).drop_duplicates()
     return df.drop(columns="label"), df["label"]
 
 def evaluate(model):
@@ -23,7 +23,6 @@ def evaluate(model):
     results = {}
 
     X, y = load_data()
-    
     scores = cross_validate(model, X, y, cv=CV, scoring=SCORING)
 
     for metric in SCORING:
@@ -37,4 +36,9 @@ def evaluate(model):
 
 def compare(models):
     """Evaluate a dict of {name: model} and return a metrics table (one row per model) as a DataFrame."""
-    return pd.DataFrame({name: evaluate(clf) for name, clf in models.items()}).T
+    results = {
+        name: evaluate(model)
+        for name, model in models.items()
+    }
+
+    return pd.DataFrame(results).T
