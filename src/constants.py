@@ -1,4 +1,4 @@
-from sklearn.model_selection import StratifiedKFold, cross_validation
+from sklearn.model_selection import StratifiedKFold, cross_validate
 from sklearn.metrics import make_scorer, recall_score
 from pathlib import Path
 # Constant seed for reproduceability
@@ -20,5 +20,14 @@ SCORING = {
     "F1": "f1",
 }
 
-# Constant file path to access data from any location
-DATA_PATH = Path(__file__).resolve().parent / "data" / "gastric.csv"
+# Constant file paths for quick access to resources
+# Project Root
+PROJECT_ROOT = Path(__file_file).resolve().parent.parent
+
+# Project Directories
+DATA_DIR = PROJECT_ROOT / "data"
+FIGURES_DIR = PROJECT_ROOT / "figures"
+NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
+
+# File path to gastric.csv
+DATA_PATH = DATA_DIR / "gastric.csv"
