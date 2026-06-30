@@ -22,7 +22,7 @@ SCORING = {
 
 # Constant file paths for quick access to resources
 # Project Root
-PROJECT_ROOT = Path(__file_file).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # Project Directories
 DATA_DIR = PROJECT_ROOT / "data"
