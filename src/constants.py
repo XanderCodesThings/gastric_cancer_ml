@@ -1,4 +1,4 @@
-from sklearn.model_selection import StratifiedKFold, cross_validate
+from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import make_scorer, recall_score
 from pathlib import Path
 # Constant seed for reproduceability
@@ -26,7 +26,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # Project Directories
 DATA_DIR = PROJECT_ROOT / "data"
-FIGURES_DIR = PROJECT_ROOT / "figures"
+FIGURES_DIR = PROJECT_ROOT / "figures" # Upload figures: plt.savefig(FIGURES_DIR / "example.png")
 NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 
 # File path to gastric.csv
