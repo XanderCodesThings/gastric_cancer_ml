@@ -1,6 +1,6 @@
-from tune import tune_model
-from constants import SEED
-from utils import evaluate
+from src.tune import tune_model
+from src.constants import SEED
+from src.utils import evaluate
 from sklearn.ensemble import RandomForestClassifier
 
 rf = RandomForestClassifier(random_state=SEED)

@@ -1,4 +1,4 @@
-from constants import DATA_PATH, CV, SCORING
+from src.constants import DATA_PATH, CV, SCORING
 import pandas as pd
 from sklearn.model_selection import cross_validate
 

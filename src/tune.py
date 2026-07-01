@@ -1,5 +1,5 @@
-from utils import load_data
-from constants import CV
+from src.utils import load_data
+from src.constants import CV
 from sklearn.model_selection import GridSearchCV
 
 def tune_model(model, param_grid, scoring="roc_auc"):
