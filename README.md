@@ -1,6 +1,8 @@
 # Repository Overview
 *Note: This project originated as part of a university AI course. The original project was developed collaboratively in a private repository. This repository contains only my independently written code, experiments, documentation, and analysis.*
 
+## Current Lines of Effort: Diving hyperparameter finetuning, model training, and model evluation. Visualization scripts currently are running computationally expensive operations each time metrics are visualized.
+
 Research Area: Predictive Analytics for Healthcare
 
 Project Title: Diagnosis of Gastric Cancer with Machine Learning

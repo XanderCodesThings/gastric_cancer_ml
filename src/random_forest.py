@@ -3,7 +3,7 @@ from src.constants import SEED
 from src.utils import evaluate
 from sklearn.ensemble import RandomForestClassifier
 
-rf = RandomForestClassifier(random_state=SEED)
+RF = RandomForestClassifier(random_state=SEED)
 
 RF_PARAM_GRID = {
     "n_estimators": [100, 200, 300],
