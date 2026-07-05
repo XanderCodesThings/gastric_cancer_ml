@@ -1,0 +1,20 @@
+{
+    "Random Forest": {
+        "best_params": {
+            "max_depth": 7,
+            "min_samples_leaf": 2,
+            "min_samples_split": 2,
+            "n_estimators": 300
+        },
+        "best_score": 0.884816209152673
+    },
+    "Gradient Boosting": {
+        "best_params": {
+            "learning_rate": 0.01,
+            "max_iter": 300,
+            "max_leaf_nodes": 15,
+            "min_samples_leaf": 40
+        },
+        "best_score": 0.8805634620661162
+    }
+}
