@@ -1,4 +1,6 @@
-from src.constants import DATA_PATH, CV, SCORING
+from src.constants import DATA_PATH, CV, SCORING, METRICS_DIR, MODELS_DIR, PARAMETERS_DIR
+import json
+import joblib
 import pandas as pd
 from sklearn.model_selection import cross_validate
 
@@ -42,3 +44,18 @@ def compare(models):
     }
 
     return pd.DataFrame(results).T
+
+def save_model(model, filename):
+    joblib.dump(model, MODELS_DIR / filename)
+
+def save_training_results(results):
+    with open(
+        PARAMETERS_DIR / "training_results.json",
+        "w",
+    ) as f:
+        json.dump(results, f, indent=4)
+
+def save_metrics(df):
+    df.to_csv(
+        METRICS_DIR / "model_metrics.csv"
+    )

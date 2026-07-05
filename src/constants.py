@@ -36,4 +36,4 @@ DATA_PATH = DATA_DIR / "gastric.csv"
 # Artifact Directories
 METRICS_DIR = ARTIFACTS_DIR / "metrics"
 MODELS_DIR = ARTIFACTS_DIR / "models"
-PARAMETERS = ARTIFACTS_DIR / "parameters"
+PARAMETERS_DIR = ARTIFACTS_DIR / "parameters"
