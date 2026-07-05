@@ -36,10 +36,10 @@ DATA_PATH = DATA_DIR / "gastric.csv"
 # Artifact Directories
 METRICS_DIR = ARTIFACTS_DIR / "metrics"
 MODELS_DIR = ARTIFACTS_DIR / "models"
-PARAMETERS_DIR = ARTIFACTS_DIR / "parameters"
+METADATA_DIR = ARTIFACTS_DIR / "metadata"
 
 # File paths to artifacts
 METRICS_FILE = METRICS_DIR / "model_metrics.csv"
 GB_FILE = MODELS_DIR / "gradient_booster.pkl"
 RF_FILE = MODELS_DIR / "random_forest.pkl"
-PARAM_FILE = PARAMETERS_DIR / "training_results.json"
+META_FILE = METADATA_DIR / "training_results.json"
