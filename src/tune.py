@@ -1,4 +1,4 @@
-from src.utils import load_data
+from src.utils import load_data, compare
 from src.constants import CV
 from sklearn.model_selection import GridSearchCV
 
