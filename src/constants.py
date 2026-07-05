@@ -28,6 +28,12 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 FIGURES_DIR = PROJECT_ROOT / "figures" # Upload figures: plt.savefig(FIGURES_DIR / "example.png")
 NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
+ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
 
 # File path to gastric.csv
 DATA_PATH = DATA_DIR / "gastric.csv"
+
+# Artifact Directories
+METRICS_DIR = ARTIFACTS_DIR / "metrics"
+MODELS_DIR = ARTIFACTS_DIR / "models"
+PARAMETERS = ARTIFACTS_DIR / "parameters"
