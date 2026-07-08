@@ -1,4 +1,4 @@
-from src.constants import DATA_PATH, CV, SCORING, METRICS_DIR, MODELS_DIR, PARAMETERS_DIR
+from src.constants import DATA_PATH, CV, SCORING, METRICS_DIR, MODELS_DIR, METADATA_DIR
 import json
 import joblib
 import pandas as pd
@@ -50,7 +50,7 @@ def save_model(model, filename):
 
 def save_training_results(results):
     with open(
-        PARAMETERS_DIR / "training_results.json",
+        METADATA_DIR / "training_results.json",
         "w",
     ) as f:
         json.dump(results, f, indent=4)
