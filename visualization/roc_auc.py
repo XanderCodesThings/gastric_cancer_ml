@@ -2,7 +2,7 @@
 import joblib
 import matplotlib.pyplot as plt
 from src.utils import load_data
-from src.constants import RF_FILE, GB_FILE, SEED, FIGURES_DIR
+from src.constants import RF_FILE, GB_FILE, SEED, FIGURES_DI
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import RocCurveDisplay
 from sklearn.pipeline import make_pipeline
