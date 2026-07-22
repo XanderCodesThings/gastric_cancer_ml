@@ -2,7 +2,7 @@
 import joblib
 import matplotlib.pyplot as plt
 from src.utils import load_data
-from src.constants import RF_FILE, GB_FILE, SEED, FIGURES_DI
+from src.constants import RF_FILE, GB_FILE, SEED, FIGURES_DIR
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import RocCurveDisplay
 from sklearn.pipeline import make_pipeline
@@ -31,24 +31,30 @@ gb_pipe = build_pipeline(best_gb)
 rf_pipe.fit(X_train, y_train)
 gb_pipe.fit(X_train, y_train)
 
-plt.figure(figsize=(7,7))
+# Create one figure and one shared set of axes
+fig, ax = plt.subplots(figsize=(8, 7))
 
 RocCurveDisplay.from_estimator(
     rf_pipe,
     X_test,
     y_test,
-    name="Random Forest"
+    name="Random Forest",
+    ax=ax
 )
 
 RocCurveDisplay.from_estimator(
     gb_pipe,
     X_test,
     y_test,
-    name="Gradient Boosting"
+    name="Gradient Boosting",
+    ax=ax
 )
 
-plt.plot([0,1],[0,1],'k--')
-plt.title("ROC Curves")
-plt.grid(alpha=0.3)
+ax.set_title("ROC Curve Comparison: Random Forest vs. Gradient Boosting")
+ax.set_xlabel("False Positive Rate")
+ax.set_ylabel("True Positive Rate")
+ax.grid(alpha=0.3)
+ax.legend(loc="lower right")
 
+fig.tight_layout()
 plt.show()
